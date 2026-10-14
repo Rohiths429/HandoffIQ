@@ -1,0 +1,14 @@
+Handover Title: Auth0 Token Service & Session Storage Migration
+From: David Vance
+To: Jessica Wong
+Date: 2026-09-28
+Shift: Morning to Evening
+
+Rough Notes:
+We rolled out the new session cookie domain configuration for single sign-on across the admin dashboard.
+Chrome and Edge users are logging in smoothly.
+We noticed token refresh failures on Safari iOS devices when users have strict cross-site tracking enabled.
+Database connection pool was hovering at 82% around lunchtime, need someone to monitor this tonight.
+The cleanup script for orphaned sessions is scheduled to run at 2 AM. Not sure who is on-call to watch it if the DB locks up.
+Also, the QA team said authentication tests were completed, but the automated smoke test suite was showing red on the auth-gateway branch.
+Someone needs to confirm with the mobile app team before tomorrow's 10 AM iOS client update.
